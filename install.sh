@@ -3,6 +3,8 @@ BASE_URL=https://raw.githubusercontent.com/avbel/vim-settings/master
 command -v vi >/dev/null 2>&1 || { echo "VIM should be installed.  Aborting." >&2; exit 1; }
 command -v ctags >/dev/null 2>&1 || { echo "ctags should be installed.  Aborting." >&2; exit 1; }
 
+[ -f ~/.vimrc ] && exit 0
+
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/plugin
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim

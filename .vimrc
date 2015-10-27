@@ -77,11 +77,6 @@ let g:neocomplete#sources#syntax#min_keyword_length = 4
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 
-let g:promptline_preset = {
-      \'a' : [ promptline#slices#user() ],
-      \'b' : [ promptline#slices#cwd() ],
-      \'z' : [ promptline#slices#vcs_branch() ],
-      \'y' : [ promptline#slices#git_status() ]}
 
 inoremap <F2> <C-O>update<CR>
 nnoremap <F2> :update<CR>

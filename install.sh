@@ -15,7 +15,7 @@ fi
 vi +NeoBundleInstall +x
 wget "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim
 wget "$BASE_URL/promptline.vim" -O ~/.vim/plugin/promptline.vim
-vi +PromptlineSnapshot ~/.shell_prompt.sh airline +x
+vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x
 echo "source ~/.shell_prompt.sh" >> ~/.profile
 source ~/.shell_prompt.sh
 

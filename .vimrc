@@ -30,7 +30,7 @@
  NeoBundle 'troydm/easybuffer.vim'
  NeoBundle 'Shougo/neocomplete.vim'
  NeoBundle 'bling/vim-airline'
- NeoBundle 'majutsushi/tagbar'
+ NeoBundle 'edkolev/promptline.vim'
  NeoBundle 'edkolev/tmuxline.vim'
  call neobundle#end()
 

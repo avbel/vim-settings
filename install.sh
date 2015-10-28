@@ -21,6 +21,6 @@ echo "Configuring shell..."
 vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x >/dev/null 2>/dev/null
 echo ". $HOME/.shell_prompt.sh" >> ~/.profile
 
-#. ~/.shell_prompt.sh
+source ~/.shell_prompt.sh
 
 echo "Done"

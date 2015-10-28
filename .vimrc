@@ -83,8 +83,6 @@ nnoremap <F2> :update<CR>
 noremap <C-F2> :wa<CR>
 inoremap <C-F2> <C-O>:wa<CR>
 nmap <C-N><C-N> :set invnumber<CR>
-inoremap <C-D><C-D> <C-O>:g/debugger;/d<CR>
-nmap <F8> :TagbarToggle<CR>
 
 " nerd tree
 autocmd StdinReadPre * let s:std_in=1

@@ -9,4 +9,6 @@ call neobundle#end()
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
+inoremap <C-D><C-D> <C-O>:g/debugger;/d<CR>
+
 filetype plugin indent on

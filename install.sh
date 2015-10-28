@@ -10,14 +10,14 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim -q
 wget "$BASE_URL/.vimrc" -O ~/.vimrc -q
 
 echo "Installing vim plugins ..."
-vi +NeoBundleInstall +x >/dev/null 2>/dev/null
+(vi +NeoBundleInstall +x >/dev/null 2>/dev/null)
 
 echo "Changing plugins settings..."
 wget "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim -q
 wget "$BASE_URL/shell.vim" -O ~/.vim/plugin/shell.vim -q
 
-echo "Configuring shell..."
-vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x >/dev/null 2>/dev/null
-echo ". $HOME/.shell_prompt.sh" >> ~/.profile
+[ -f ~/.shell_prompt.sh ] && exit 0
 
-echo "Done"
+echo "Configuring shell..."
+(vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x >/dev/null 2>/dev/null)
+echo ". $HOME/.shell_prompt.sh" >> ~/.profile

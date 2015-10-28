@@ -7,5 +7,6 @@ echo "Installing vim plugins for NodeJS ..."
 wget "$BASE_URL/node.vim" -O ~/.vim/plugin/node.vim -q
 vi +NeoBundleInstall +x >/dev/null 2>/dev/null
 echo "Installing some required tools for NodeJS"
-npm install -g tern eslint_d >/dev/null 2>/dev/null
+npm install eslint eslint_d >/dev/null 2>/dev/null
+cd ~/.vim/bundle/tern_for_vim && npm install
 echo "Done"

@@ -12,11 +12,21 @@ wget "$BASE_URL/.vimrc" -O ~/.vimrc
 if command -v tmux >/dev/null 2>&1; then
   wget "$BASE_URL/tmux.vim" -O ~/.vim/plugin/tmux.vim
 fi
+
+sleep 2
+echo "Installing vim plugins ..."
 vi +NeoBundleInstall +xa
+sleep 2
+
+echo "Changing plugins settings..."
 wget "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim
 wget "$BASE_URL/promptline.vim" -O ~/.vim/plugin/promptline.vim
+sleep 2
+
+echo "Configuring shell..."
 vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x
 echo ". $HOME/.shell_prompt.sh" >> ~/.profile
-. ~/.shell_prompt.sh
+
+echo "Done"
 
 

@@ -8,23 +8,20 @@ command -v ctags >/dev/null 2>&1 || { echo "ctags should be installed.  Aborting
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/plugin
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-wget "$BASE_URL/.vimrc" -O ~/.vimrc
+wget –quiet "$BASE_URL/.vimrc" -O ~/.vimrc
 if command -v tmux >/dev/null 2>&1; then
   wget "$BASE_URL/tmux.vim" -O ~/.vim/plugin/tmux.vim
 fi
 
-sleep 2
 echo "Installing vim plugins ..."
-vi +NeoBundleInstall +xa
-sleep 2
+vi +NeoBundleInstall +xa >/dev/null 2>/dev/null
 
 echo "Changing plugins settings..."
-wget "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim
-wget "$BASE_URL/promptline.vim" -O ~/.vim/plugin/promptline.vim
-sleep 2
+wget –quiet "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim
+wget –quiet "$BASE_URL/promptline.vim" -O ~/.vim/plugin/promptline.vim
 
 echo "Configuring shell..."
-vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x
+vi +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x >/dev/null 2>/dev/null
 echo ". $HOME/.shell_prompt.sh" >> ~/.profile
 
 echo "Done"

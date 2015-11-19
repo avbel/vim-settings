@@ -12,7 +12,7 @@ wget "$BASE_URL/.vimrc" -O ~/.vimrc -q
 echo "Installing vim plugins ..."
 
 
-vim +NeoBundleInstall +x </dev/tty >/dev/null 2>/dev/null
+vim +NeoBundleInstall +x  >/dev/null 2>/dev/null
 
 echo "Changing plugins settings..."
 wget "$BASE_URL/current-theme.vim" -O ~/.vim/plugin/current-theme.vim -q
@@ -22,5 +22,5 @@ wget "$BASE_URL/shell.vim" -O ~/.vim/plugin/shell.vim -q
 
 echo "Configuring shell..."
 
-vim +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x </dev/tty >/dev/null 2>/dev/null
+vim +"PromptlineSnapshot ~/.shell_prompt.sh airline" +x  >/dev/null 2>/dev/null
 echo ". $HOME/.shell_prompt.sh" >> ~/.profile

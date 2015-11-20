@@ -7,7 +7,7 @@ command -v vim >/dev/null 2>&1 || { echo "vim should be installed.  Aborting." >
 
 echo "Installing vim plugins for NodeJS ..."
 wget "$BASE_URL/node.vim" -O ~/.vim/plugin/node.vim -q
-vim +NeoBundleInstall +x </dev/tty >/dev/null 2>/dev/null
+vim +NeoBundleInstall +x  >/dev/null 2>/dev/null
 echo "Installing some required tools for NodeJS"
 npm install -g eslint eslint_d >/dev/null 2>/dev/null
 (cd ~/.vim/bundle/tern_for_vim && npm install >/dev/null 2>/dev/null)

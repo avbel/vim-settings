@@ -6,5 +6,5 @@ command -v vim >/dev/null 2>&1 || { echo "vim should be installed.  Aborting." >
 
 echo "Installing vim plugins for Go ..."
 wget "$BASE_URL/go.vim" -O ~/.vim/plugin/go.vim -q
-vim +NeoBundleInstall +x </dev/tty >/dev/null 2>/dev/null
+vim +NeoBundleInstall +x >/dev/null 2>/dev/null
 echo "Done"
